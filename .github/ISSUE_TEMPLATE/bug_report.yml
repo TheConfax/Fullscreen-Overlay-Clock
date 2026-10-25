@@ -1,0 +1,29 @@
+name: "🚫 Bug report"
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Open the app settings > "System" tab > find it next to the logo
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash-log
+    attributes:
+      label: Crash log
+      # Store package path: recompute the 13-char id if publisher/package in pyproject.toml change.
+      description: 'Open File Explorer > find it here: `%LOCALAPPDATA%\Packages\TheConfax.FullscreenOverlayClock_009fx67jq4dg8\LocalCache\Roaming\FullscreenOverlayClock`'
+      placeholder: 'Drag crash.log here, or write "none"'
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Describe the problem
+    validations:
+      required: true

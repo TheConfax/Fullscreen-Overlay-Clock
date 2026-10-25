@@ -1,0 +1,22 @@
+# Design workspace
+/media/
+
+# Claude working notes
+/.claude/
+
+# Build & distribution
+/build/
+/dist/
+/sdk/
+
+# Python
+.venv/
+__pycache__/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/tasks.json
+
+# Windows Explorer
+desktop.ini
+Thumbs.db
