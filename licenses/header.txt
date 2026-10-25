@@ -1,0 +1,21 @@
+================================================================================
+THIRD-PARTY SOFTWARE NOTICES AND LICENSES
+================================================================================
+
+Fullscreen Overlay Clock, as a built product, is distributed under the GNU
+General Public License version 3. The source code of this product, licensed
+under the MIT License, is available at:
+{repo}
+
+Fullscreen Overlay Clock uses Qt. Qt and its use are covered by the GNU Lesser
+General Public License version 3. Copyright (C) The Qt Company Ltd. and other
+contributors. The source code of Qt is available at:
+https://download.qt.io/archive/qt/{qt_minor}/{qt}/
+
+Fullscreen Overlay Clock uses PyQt6. PyQt6 and its use are covered by the GNU
+General Public License version 3. Copyright (C) Riverbank Computing Limited.
+The source code of PyQt6 is available at:
+https://pypi.org/project/PyQt6/{pyqt}/#files
+
+Fullscreen Overlay Clock includes third-party components.
+Each is distributed under its own license, reproduced in full below.

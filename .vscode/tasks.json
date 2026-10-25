@@ -1,0 +1,160 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "[DEV] Build All & Install",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "[DEV] Build EXE",
+                "[DEV] Build MSIX",
+                "[DEV] Install"
+            ],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "[DEV] Build EXE",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/build_exe.py",
+                "--dev"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "[DEV] Build MSIX",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/build_msix.py",
+                "--dev"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "[DEV] Install",
+            "type": "process",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/scripts/install_dev.ps1"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "[DEV] Uninstall",
+            "type": "process",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/scripts/uninstall_dev.ps1"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "[REL] Build All",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "[REL] Build EXE",
+                "[REL] Build MSIX"
+            ],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "[REL] Build EXE",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/build_exe.py",
+                "--release"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "[REL] Build MSIX",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/build_msix.py",
+                "--release"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "Check Sizes",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/check_sizes.py",
+                "--verbose"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "Rebuild Icons",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/icons.py",
+                "build"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        },
+        {
+            "label": "Rebuild Licenses",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": [
+                "${workspaceFolder}/scripts/licenses.py",
+                "build"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "echo": false
+            }
+        }
+    ]
+}
