@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fullscreen-overlay-clock"
+version = "1.0.0"
+description = "A lightweight, customizable clock that floats over fullscreen games and apps."
+authors = [{ name = "TheConfax" }]
+license = "MIT"
+requires-python = ">=3.14"
+
+dependencies = [
+    "PyQt6==6.11.0",
+    "hidapi==0.15.0",
+    "winrt-runtime==3.2.1",
+    "winrt-Windows.ApplicationModel==3.2.1",
+    "winrt-Windows.Devices.Display.Core==3.2.1",
+    "winrt-Windows.Foundation==3.2.1",
+    "winrt-Windows.Foundation.Collections==3.2.1",
+]
+
+[project.urls]
+Repository = "https://github.com/TheConfax/Fullscreen-Overlay-Clock"
+Issues = "https://github.com/TheConfax/Fullscreen-Overlay-Clock/issues"
+Funding = "https://ko-fi.com/theconfax"
+
+[dependency-groups]
+dev = [
+    "pyinstaller==6.21.0",
+    "deptry==0.23.1",
+]
+
+[tool.fullscreen-overlay-clock]
+app-name = "Fullscreen Overlay Clock"
+config-version = 1
+copyright-year = "2026"
+
+# DO NOT EDIT: the names Windows and the Store already know us by.
+# Changing one turns an update into a different app, orphaning
+# the user's Start pin, autostart entry and %APPDATA% folder.
+[tool.fullscreen-overlay-clock.identifiers]
+package = "TheConfax.FullscreenOverlayClock"
+publisher = "CN=878F3B91-7427-45C5-A4C0-7D7F53634951"
+application = "FullscreenOverlayClock"
+appdata-dir = "FullscreenOverlayClock"
+startup-task = "FullscreenOverlayClockStartup"
+store-id = "9PJCDSKT048V"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+# Exclude build/ and dist/ from Pylance, keeping its basic mode and default excludes.
+[tool.pyright]
+typeCheckingMode = "basic"
+exclude = ["build", "dist", "**/__pycache__", "**/.*"]

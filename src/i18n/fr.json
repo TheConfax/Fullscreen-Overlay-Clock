@@ -1,0 +1,170 @@
+{
+  "_language": "Français",
+
+  "tray": {
+    "settings": "Paramètres…",
+    "quit": "Quitter"
+  },
+
+  "tabs": {
+    "clock": {
+      "title": "Horloge",
+
+      "time_format": {
+        "title": "Format horaire",
+        "use_24h": "24 heures",
+        "show_ampm": "AM/PM",
+        "show_seconds": "Secondes",
+        "leading_zero": "Zéro initial"
+      },
+      "text": {
+        "title": "Texte",
+        "color": "Couleur",
+        "opacity": "Opacité"
+      },
+      "background": {
+        "title": "Fond",
+        "color": "Couleur",
+        "opacity": "Opacité",
+        "padding": "Espace",
+        "corner_radius": "Coins",
+        "corner_pad": "Arrondir/carrer le coin",
+        "auto_corners": "Auto"
+      },
+      "shadow": {
+        "title": "Ombre/Halo",
+        "color": "Couleur",
+        "intensity": "Intensité",
+        "blur": "Flou",
+        "offset_x": "Position X",
+        "offset_y": "Position Y",
+        "offset_pad": "Position X/Y"
+      },
+      "color_picker": {
+        "eyedropper": "Choisir une couleur à l'écran"
+      }
+    },
+
+    "exclusions": {
+      "title": "Exclusions",
+
+      "add_current": "Exclure l'appli active",
+      "no_app": "Aucune, ouvre l'appli à exclure.",
+      "add_other": "Exclure autre appli",
+      "placeholder": "Nom du processus (chrome.exe)",
+      "hint": "L'horloge n'apparaîtra pas au-dessus des applis listées ici.",
+      "remove": "Retirer"
+    },
+
+    "system": {
+      "title": "Système",
+
+      "display": {
+        "title": "Écran",
+        "show_on_desktop": "Toujours afficher l'horloge (pas seulement en plein écran)",
+        "monitor": "Moniteur",
+        "monitor_entry": "{name} · {position}",
+        "positions": {
+          "left": "à gauche",
+          "right": "à droite",
+          "center": "au centre",
+          "top": "en haut",
+          "bottom": "en bas",
+          "very_top": "tout en haut",
+          "very_bottom": "tout en bas",
+          "corner": "{row} {column}",
+          "first": "premier",
+          "second": "deuxième",
+          "third": "troisième",
+          "fourth": "quatrième",
+          "fifth": "cinquième",
+          "ordinal_row": "{ordinal} {row}",
+          "unplugged": "non connecté",
+          "too_many": "mais combien ?"
+        }
+      },
+      "startup": {
+        "title": "Démarrage automatique",
+        "enable": "Lancer avec Windows",
+        "blocked_hint": "Désactivé dans les paramètres Windows.",
+        "open_windows_settings": "Ouvrir les paramètres"
+      },
+      "interface": {
+        "title": "Interface",
+        "theme": "Thème",
+        "theme_auto": "Auto",
+        "theme_light": "Clair",
+        "theme_dark": "Sombre",
+        "language": "Langue",
+        "language_auto": "Auto"
+      },
+      "reset": {
+        "title": "Réinitialiser",
+        "clock": "Rétablir l'apparence",
+        "exclusions": "Vider les exclusions",
+        "tutorial": "Relancer le tutoriel",
+        "modals": {
+          "clock": {
+            "title": "Rétablir l'apparence de l'horloge ?",
+            "body": "Rétablit tous les paramètres de l'onglet Horloge.\nL'horloge sera déplacée dans le coin supérieur droit.",
+            "ok": "Rétablir",
+            "cancel": "Annuler"
+          },
+          "exclusions": {
+            "title": "Vider la liste des exclusions ?",
+            "body": "Vide toute la liste des exclusions.\nL'horloge réapparaîtra au-dessus de toutes les applis.",
+            "ok": "Vider",
+            "cancel": "Annuler"
+          },
+          "tutorial": {
+            "title": "Relancer le tutoriel ?",
+            "body": "L'appli redémarrera et le tutoriel sera affiché à nouveau.",
+            "ok": "Relancer",
+            "cancel": "Annuler"
+          }
+        }
+      },
+      "about": {
+        "licenses": "Licences",
+        "donate": "Soutiens le projet",
+        "report_issue": "Signaler un bug",
+        "rate": "Noter",
+        "modals": {
+          "licenses": {
+            "close": "Fermer"
+          }
+        }
+      }
+    }
+  },
+
+  "tutorial": {
+    "skip": "Passer le tutoriel",
+    "click_hint": "Clique pour continuer…",
+    "no_scroll_hint": "Pas de molette ? Clique pour continuer…",
+    "modals": {
+      "skip": {
+        "title": "Passer le tutoriel ?",
+        "body": "Tu pourras le relancer à tout moment depuis les paramètres.",
+        "ok": "Passer",
+        "cancel": "Annuler"
+      }
+    },
+
+    "step1": "Salut ! Je suis ta nouvelle horloge !\n\nJe n'apparais qu'au-dessus des applis en plein écran, mais je voulais te dire bonjour !",
+    "step2": "Fais un clic droit sur moi pour déverrouiller ma position.",
+    "step3": "Quand je suis déverrouillée, des flèches apparaissent et tu peux me déplacer.\n\nAmène-moi sur un bord de l'écran\net je m'y accroche !",
+    "step4": "Parfait !",
+    "step5": "Pour ajuster finement ma position, tu peux survoler les flèches (ou moi) et utiliser la molette de la souris.",
+    "step6": "Quand je suis déverrouillée, tu peux ouvrir les paramètres depuis l'icône d'engrenage.",
+    "step7": "Si tu ne me vois pas, tu peux ouvrir les paramètres en double-cliquant sur mon icône dans la zone de notification.",
+    "step8": "Dans la fenêtre des paramètres, tu peux changer mon apparence et me masquer dans certaines applis.\n\nTu peux toujours me déplacer quand les paramètres sont ouverts.",
+    "step9": "C'est tout ! À la prochaine, quand tu joueras ou regarderas quelque chose. Salut !"
+  },
+
+  "newer_config": {
+    "title": "Mets à jour {app}",
+    "body": "Tes paramètres appartiennent à une version plus récente de l'appli.",
+    "close": "Fermer"
+  }
+}

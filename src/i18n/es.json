@@ -1,0 +1,170 @@
+{
+  "_language": "Español",
+
+  "tray": {
+    "settings": "Ajustes…",
+    "quit": "Salir"
+  },
+
+  "tabs": {
+    "clock": {
+      "title": "Reloj",
+
+      "time_format": {
+        "title": "Formato de hora",
+        "use_24h": "24 horas",
+        "show_ampm": "AM/PM",
+        "show_seconds": "Segundos",
+        "leading_zero": "Cero inicial"
+      },
+      "text": {
+        "title": "Texto",
+        "color": "Color",
+        "opacity": "Opacidad"
+      },
+      "background": {
+        "title": "Fondo",
+        "color": "Color",
+        "opacity": "Opacidad",
+        "padding": "Espaciado",
+        "corner_radius": "Esquinas",
+        "corner_pad": "Redondear/cuadrar esquina",
+        "auto_corners": "Auto"
+      },
+      "shadow": {
+        "title": "Sombra/Brillo",
+        "color": "Color",
+        "intensity": "Fuerza",
+        "blur": "Difusión",
+        "offset_x": "Posición X",
+        "offset_y": "Posición Y",
+        "offset_pad": "Posición X/Y"
+      },
+      "color_picker": {
+        "eyedropper": "Elegir un color de la pantalla"
+      }
+    },
+
+    "exclusions": {
+      "title": "Exclusiones",
+
+      "add_current": "Excluir app actual",
+      "no_app": "Ninguna, abre la app a excluir.",
+      "add_other": "Excluir otra app",
+      "placeholder": "Nombre del proceso (chrome.exe)",
+      "hint": "El reloj no aparecerá sobre las apps de esta lista.",
+      "remove": "Quitar"
+    },
+
+    "system": {
+      "title": "Sistema",
+
+      "display": {
+        "title": "Pantalla",
+        "show_on_desktop": "Mostrar siempre el reloj (no solo en pantalla completa)",
+        "monitor": "Monitor",
+        "monitor_entry": "{name} · {position}",
+        "positions": {
+          "left": "a la izquierda",
+          "right": "a la derecha",
+          "center": "en el centro",
+          "top": "arriba",
+          "bottom": "abajo",
+          "very_top": "arriba del todo",
+          "very_bottom": "abajo del todo",
+          "corner": "{row} {column}",
+          "first": "primero",
+          "second": "segundo",
+          "third": "tercero",
+          "fourth": "cuarto",
+          "fifth": "quinto",
+          "ordinal_row": "{ordinal} {row}",
+          "unplugged": "no conectado",
+          "too_many": "¿pero cuántos?"
+        }
+      },
+      "startup": {
+        "title": "Inicio automático",
+        "enable": "Iniciar con Windows",
+        "blocked_hint": "Desactivado en los ajustes de Windows.",
+        "open_windows_settings": "Abrir ajustes"
+      },
+      "interface": {
+        "title": "Interfaz",
+        "theme": "Tema",
+        "theme_auto": "Auto",
+        "theme_light": "Claro",
+        "theme_dark": "Oscuro",
+        "language": "Idioma",
+        "language_auto": "Auto"
+      },
+      "reset": {
+        "title": "Restablecer",
+        "clock": "Restablecer aspecto",
+        "exclusions": "Quitar exclusiones",
+        "tutorial": "Reiniciar tutorial",
+        "modals": {
+          "clock": {
+            "title": "¿Restablecer el aspecto del reloj?",
+            "body": "Restablece todos los ajustes de la pestaña Reloj.\nEl reloj se moverá a la esquina superior derecha.",
+            "ok": "Restablecer",
+            "cancel": "Cancelar"
+          },
+          "exclusions": {
+            "title": "¿Quitar todas las exclusiones?",
+            "body": "Vacía toda la lista de exclusiones.\nEl reloj volverá a aparecer sobre todas las apps.",
+            "ok": "Quitar",
+            "cancel": "Cancelar"
+          },
+          "tutorial": {
+            "title": "¿Reiniciar el tutorial?",
+            "body": "La app se reiniciará y el tutorial se mostrará de nuevo.",
+            "ok": "Reiniciar",
+            "cancel": "Cancelar"
+          }
+        }
+      },
+      "about": {
+        "licenses": "Licencias",
+        "donate": "Apoya el proyecto",
+        "report_issue": "Reportar bug",
+        "rate": "Valorar",
+        "modals": {
+          "licenses": {
+            "close": "Cerrar"
+          }
+        }
+      }
+    }
+  },
+
+  "tutorial": {
+    "skip": "Saltar tutorial",
+    "click_hint": "Haz clic para continuar…",
+    "no_scroll_hint": "¿Sin rueda? Haz clic para continuar…",
+    "modals": {
+      "skip": {
+        "title": "¿Saltar el tutorial?",
+        "body": "Puedes volver a verlo cuando quieras desde los ajustes.",
+        "ok": "Saltar",
+        "cancel": "Cancelar"
+      }
+    },
+
+    "step1": "¡Hola! ¡Soy tu nuevo reloj!\n\nSolo aparezco sobre las apps a pantalla completa, ¡pero quería saludarte!",
+    "step2": "Haz clic derecho sobre mí para desbloquear mi posición.",
+    "step3": "Cuando estoy desbloqueado aparecen las flechas y puedes arrastrarme.\n\n¡Llévame a un borde de la pantalla\ny me engancho a él!",
+    "step4": "¡Bien!",
+    "step5": "Para ajustar mi posición con precisión, puedes pasar el cursor sobre las flechas (o sobre mí) y usar la rueda del ratón.",
+    "step6": "Cuando estoy desbloqueado, puedes abrir los ajustes desde el icono del engranaje.",
+    "step7": "Si no me ves, puedes abrir los ajustes haciendo doble clic en mi icono del área de notificación.",
+    "step8": "En la ventana de ajustes puedes cambiar mi aspecto y ocultarme en apps concretas.\n\nPuedes arrastrarme siempre que los ajustes estén abiertos.",
+    "step9": "¡Eso es todo! Nos vemos la próxima vez que juegues o veas algo. ¡Adiós!"
+  },
+
+  "newer_config": {
+    "title": "Actualiza {app}",
+    "body": "Tus ajustes pertenecen a una versión más reciente de la app.",
+    "close": "Cerrar"
+  }
+}

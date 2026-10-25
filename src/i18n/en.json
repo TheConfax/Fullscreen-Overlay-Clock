@@ -1,0 +1,170 @@
+{
+  "_language": "English",
+
+  "tray": {
+    "settings": "Settings…",
+    "quit": "Quit"
+  },
+
+  "tabs": {
+    "clock": {
+      "title": "Clock",
+
+      "time_format": {
+        "title": "Time format",
+        "use_24h": "24-hour",
+        "show_ampm": "AM/PM",
+        "show_seconds": "Seconds",
+        "leading_zero": "Leading zero"
+      },
+      "text": {
+        "title": "Text",
+        "color": "Color",
+        "opacity": "Opacity"
+      },
+      "background": {
+        "title": "Background",
+        "color": "Color",
+        "opacity": "Opacity",
+        "padding": "Padding",
+        "corner_radius": "Corners",
+        "corner_pad": "Round/square corner",
+        "auto_corners": "Auto"
+      },
+      "shadow": {
+        "title": "Shadow/Glow",
+        "color": "Color",
+        "intensity": "Intensity",
+        "blur": "Blur",
+        "offset_x": "X position",
+        "offset_y": "Y position",
+        "offset_pad": "X/Y position"
+      },
+      "color_picker": {
+        "eyedropper": "Pick a color from the screen"
+      }
+    },
+
+    "exclusions": {
+      "title": "Exclusions",
+
+      "add_current": "Exclude current app",
+      "no_app": "None, open the app to exclude.",
+      "add_other": "Exclude other app",
+      "placeholder": "Process name (chrome.exe)",
+      "hint": "The clock will not appear above the apps listed here.",
+      "remove": "Remove"
+    },
+
+    "system": {
+      "title": "System",
+
+      "display": {
+        "title": "Display",
+        "show_on_desktop": "Always show clock (not only above fullscreen apps)",
+        "monitor": "Monitor",
+        "monitor_entry": "{name} · {position}",
+        "positions": {
+          "left": "left",
+          "right": "right",
+          "center": "center",
+          "top": "top",
+          "bottom": "bottom",
+          "very_top": "very top",
+          "very_bottom": "very bottom",
+          "corner": "{row} {column}",
+          "first": "first",
+          "second": "second",
+          "third": "third",
+          "fourth": "fourth",
+          "fifth": "fifth",
+          "ordinal_row": "{ordinal}, {row}",
+          "unplugged": "not connected",
+          "too_many": "how many are there?"
+        }
+      },
+      "startup": {
+        "title": "Autostart",
+        "enable": "Start with Windows",
+        "blocked_hint": "Turned off in Windows settings.",
+        "open_windows_settings": "Open settings"
+      },
+      "interface": {
+        "title": "Interface",
+        "theme": "Theme",
+        "theme_auto": "Auto",
+        "theme_light": "Light",
+        "theme_dark": "Dark",
+        "language": "Language",
+        "language_auto": "Auto"
+      },
+      "reset": {
+        "title": "Reset",
+        "clock": "Reset appearance",
+        "exclusions": "Clear exclusions",
+        "tutorial": "Restart tutorial",
+        "modals": {
+          "clock": {
+            "title": "Reset clock appearance?",
+            "body": "Restore all the settings in the Clock tab.\nThe clock will be moved to the upper-right corner.",
+            "ok": "Reset",
+            "cancel": "Cancel"
+          },
+          "exclusions": {
+            "title": "Clear all exclusions?",
+            "body": "Clear the entire exclusion list.\nThe clock will start appearing over every app again.",
+            "ok": "Clear",
+            "cancel": "Cancel"
+          },
+          "tutorial": {
+            "title": "Restart tutorial?",
+            "body": "The app will restart and the tutorial will be shown again.",
+            "ok": "Restart",
+            "cancel": "Cancel"
+          }
+        }
+      },
+      "about": {
+        "licenses": "Licenses",
+        "donate": "Support this project",
+        "report_issue": "Report a bug",
+        "rate": "Rate",
+        "modals": {
+          "licenses": {
+            "close": "Close"
+          }
+        }
+      }
+    }
+  },
+
+  "tutorial": {
+    "skip": "Skip tutorial",
+    "click_hint": "Click to continue…",
+    "no_scroll_hint": "No scroll wheel? Click to continue…",
+    "modals": {
+      "skip": {
+        "title": "Skip the tutorial?",
+        "body": "You can run it again any time from the settings.",
+        "ok": "Skip",
+        "cancel": "Cancel"
+      }
+    },
+
+    "step1": "Hello! I'm your new clock!\n\nI only appear above fullscreen apps, but I wanted to say hi!",
+    "step2": "Right-click me to unlock my position.",
+    "step3": "When I'm unlocked, arrows appear and you can drag me around.\n\nMove me to a screen border\nand I'll snap to it!",
+    "step4": "Nice!",
+    "step5": "To fine-tune my position you can hover the arrows (or me) and use the mouse scroll wheel.",
+    "step6": "When I'm unlocked, you can open the settings from the cog icon.",
+    "step7": "If I'm not visible, you can open the settings by double-clicking my tray icon.",
+    "step8": "In the settings window you can change how I look and hide me from specific apps.\n\nYou can always drag me while the settings are open.",
+    "step9": "That's it! See you next time you're gaming or watching something. Bye!"
+  },
+
+  "newer_config": {
+    "title": "Update {app}",
+    "body": "Your settings belong to a newer version of the app.",
+    "close": "Close"
+  }
+}

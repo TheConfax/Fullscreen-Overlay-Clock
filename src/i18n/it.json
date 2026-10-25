@@ -1,0 +1,170 @@
+{
+  "_language": "Italiano",
+
+  "tray": {
+    "settings": "Impostazioni…",
+    "quit": "Esci"
+  },
+
+  "tabs": {
+    "clock": {
+      "title": "Orologio",
+
+      "time_format": {
+        "title": "Formato ora",
+        "use_24h": "24 ore",
+        "show_ampm": "AM/PM",
+        "show_seconds": "Secondi",
+        "leading_zero": "Zero iniziale"
+      },
+      "text": {
+        "title": "Testo",
+        "color": "Colore",
+        "opacity": "Opacità"
+      },
+      "background": {
+        "title": "Sfondo",
+        "color": "Colore",
+        "opacity": "Opacità",
+        "padding": "Spaziatura",
+        "corner_radius": "Angoli",
+        "corner_pad": "Arrotonda/squadra angolo",
+        "auto_corners": "Auto"
+      },
+      "shadow": {
+        "title": "Ombra/Bagliore",
+        "color": "Colore",
+        "intensity": "Intensità",
+        "blur": "Sfocatura",
+        "offset_x": "Posiz. X",
+        "offset_y": "Posiz. Y",
+        "offset_pad": "Posizione X/Y"
+      },
+      "color_picker": {
+        "eyedropper": "Preleva un colore dallo schermo"
+      }
+    },
+
+    "exclusions": {
+      "title": "Esclusioni",
+
+      "add_current": "Escludi l'app attuale",
+      "no_app": "Nessuna, apri l'app da escludere.",
+      "add_other": "Escludi un'altra app",
+      "placeholder": "Nome del processo (chrome.exe)",
+      "hint": "L'orologio non comparirà sopra le app elencate qui.",
+      "remove": "Rimuovi"
+    },
+
+    "system": {
+      "title": "Sistema",
+
+      "display": {
+        "title": "Schermo",
+        "show_on_desktop": "Mostra sempre l'orologio (non solo sopra schermo intero)",
+        "monitor": "Monitor",
+        "monitor_entry": "{name} · {position}",
+        "positions": {
+          "left": "a sinistra",
+          "right": "a destra",
+          "center": "al centro",
+          "top": "in alto",
+          "bottom": "in basso",
+          "very_top": "ancora più in alto",
+          "very_bottom": "ancora più in basso",
+          "corner": "{row} {column}",
+          "first": "primo",
+          "second": "secondo",
+          "third": "terzo",
+          "fourth": "quarto",
+          "fifth": "quinto",
+          "ordinal_row": "{ordinal} {row}",
+          "unplugged": "non collegato",
+          "too_many": "ma quanti sono?"
+        }
+      },
+      "startup": {
+        "title": "Avvio automatico",
+        "enable": "Avvia con Windows",
+        "blocked_hint": "Disattivato nelle impostazioni di Windows.",
+        "open_windows_settings": "Apri impostazioni"
+      },
+      "interface": {
+        "title": "Interfaccia",
+        "theme": "Tema",
+        "theme_auto": "Auto",
+        "theme_light": "Chiaro",
+        "theme_dark": "Scuro",
+        "language": "Lingua",
+        "language_auto": "Auto"
+      },
+      "reset": {
+        "title": "Ripristino",
+        "clock": "Ripristina aspetto",
+        "exclusions": "Rimuovi esclusioni",
+        "tutorial": "Riavvia tutorial",
+        "modals": {
+          "clock": {
+            "title": "Ripristinare l'aspetto dell'orologio?",
+            "body": "Ripristina tutte le impostazioni della scheda Orologio.\nL'orologio verrà spostato nell'angolo in alto a destra.",
+            "ok": "Ripristina",
+            "cancel": "Annulla"
+          },
+          "exclusions": {
+            "title": "Rimuovere tutte le esclusioni?",
+            "body": "Svuota l'intero elenco delle esclusioni.\nL'orologio tornerà a comparire sopra ogni app.",
+            "ok": "Rimuovi",
+            "cancel": "Annulla"
+          },
+          "tutorial": {
+            "title": "Riavviare il tutorial?",
+            "body": "L'app si riavvierà e il tutorial verrà mostrato di nuovo.",
+            "ok": "Riavvia",
+            "cancel": "Annulla"
+          }
+        }
+      },
+      "about": {
+        "licenses": "Licenze",
+        "donate": "Sostieni il progetto",
+        "report_issue": "Segnala un bug",
+        "rate": "Valuta",
+        "modals": {
+          "licenses": {
+            "close": "Chiudi"
+          }
+        }
+      }
+    }
+  },
+
+  "tutorial": {
+    "skip": "Salta il tutorial",
+    "click_hint": "Clicca per continuare…",
+    "no_scroll_hint": "Niente rotellina? Clicca per continuare…",
+    "modals": {
+      "skip": {
+        "title": "Saltare il tutorial?",
+        "body": "Puoi rifarlo quando vuoi dalle impostazioni.",
+        "ok": "Salta",
+        "cancel": "Annulla"
+      }
+    },
+
+    "step1": "Ciao! Sono il tuo nuovo orologio!\n\nCompaio solo sopra le app a schermo intero, ma volevo salutarti!",
+    "step2": "Fai clic destro su di me per sbloccare la mia posizione.",
+    "step3": "Quando sono sbloccato compaiono le frecce e puoi trascinarmi in giro.\n\nPortami su un bordo dello schermo\ne mi ci aggancio!",
+    "step4": "Bene!",
+    "step5": "Per regolare con precisione la mia posizione puoi passare sulle frecce (o su di me) e usare la rotellina del mouse.",
+    "step6": "Quando sono sbloccato puoi aprire le impostazioni dall'icona dell'ingranaggio.",
+    "step7": "Se non mi vedi, puoi aprire le impostazioni facendo doppio clic sulla mia icona nell'area di notifica.",
+    "step8": "Nella finestra delle impostazioni puoi cambiare il mio aspetto e nascondermi in app specifiche.\n\nPuoi sempre trascinarmi mentre le impostazioni sono aperte.",
+    "step9": "È tutto! Ci vediamo la prossima volta che giochi o guardi qualcosa. Ciao!"
+  },
+
+  "newer_config": {
+    "title": "Aggiorna {app}",
+    "body": "Le tue impostazioni appartengono a una versione più nuova dell'app.",
+    "close": "Chiudi"
+  }
+}

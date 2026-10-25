@@ -1,0 +1,170 @@
+{
+  "_language": "Deutsch",
+
+  "tray": {
+    "settings": "Einstellungen…",
+    "quit": "Beenden"
+  },
+
+  "tabs": {
+    "clock": {
+      "title": "Uhr",
+
+      "time_format": {
+        "title": "Zeitformat",
+        "use_24h": "24 Stunden",
+        "show_ampm": "AM/PM",
+        "show_seconds": "Sekunden",
+        "leading_zero": "Führende Null"
+      },
+      "text": {
+        "title": "Text",
+        "color": "Farbe",
+        "opacity": "Deckkraft"
+      },
+      "background": {
+        "title": "Hintergrund",
+        "color": "Farbe",
+        "opacity": "Deckkraft",
+        "padding": "Abstand",
+        "corner_radius": "Ecken",
+        "corner_pad": "Ecke abrunden/eckig machen",
+        "auto_corners": "Auto"
+      },
+      "shadow": {
+        "title": "Schatten/Schein",
+        "color": "Farbe",
+        "intensity": "Stärke",
+        "blur": "Unschärfe",
+        "offset_x": "X-Position",
+        "offset_y": "Y-Position",
+        "offset_pad": "X/Y-Position"
+      },
+      "color_picker": {
+        "eyedropper": "Farbe vom Bildschirm wählen"
+      }
+    },
+
+    "exclusions": {
+      "title": "Ausschlüsse",
+
+      "add_current": "Aktuelle App sperren",
+      "no_app": "Keine, öffne die App zum Sperren.",
+      "add_other": "Andere App sperren",
+      "placeholder": "Prozessname (chrome.exe)",
+      "hint": "Die Uhr erscheint nicht über den hier gelisteten Apps.",
+      "remove": "Entfernen"
+    },
+
+    "system": {
+      "title": "System",
+
+      "display": {
+        "title": "Anzeige",
+        "show_on_desktop": "Uhr immer zeigen (nicht nur im Vollbild)",
+        "monitor": "Monitor",
+        "monitor_entry": "{name} · {position}",
+        "positions": {
+          "left": "links",
+          "right": "rechts",
+          "center": "in der Mitte",
+          "top": "oben",
+          "bottom": "unten",
+          "very_top": "ganz oben",
+          "very_bottom": "ganz unten",
+          "corner": "{row} {column}",
+          "first": "erster",
+          "second": "zweiter",
+          "third": "dritter",
+          "fourth": "vierter",
+          "fifth": "fünfter",
+          "ordinal_row": "{ordinal}, {row}",
+          "unplugged": "nicht verbunden",
+          "too_many": "wie viele denn?"
+        }
+      },
+      "startup": {
+        "title": "Autostart",
+        "enable": "Mit Windows starten",
+        "blocked_hint": "In den Windows-Einstellungen deaktiviert.",
+        "open_windows_settings": "Einstellungen öffnen"
+      },
+      "interface": {
+        "title": "Oberfläche",
+        "theme": "Design",
+        "theme_auto": "Auto",
+        "theme_light": "Hell",
+        "theme_dark": "Dunkel",
+        "language": "Sprache",
+        "language_auto": "Auto"
+      },
+      "reset": {
+        "title": "Zurücksetzen",
+        "clock": "Stil zurücksetzen",
+        "exclusions": "Ausschlüsse löschen",
+        "tutorial": "Tutorial neu starten",
+        "modals": {
+          "clock": {
+            "title": "Uhr-Stil zurücksetzen?",
+            "body": "Setzt alle Einstellungen im Tab Uhr zurück.\nDie Uhr wird in die obere rechte Ecke verschoben.",
+            "ok": "Zurücksetzen",
+            "cancel": "Abbrechen"
+          },
+          "exclusions": {
+            "title": "Alle Ausschlüsse löschen?",
+            "body": "Leert die gesamte Ausschlussliste.\nDie Uhr erscheint wieder über allen Apps.",
+            "ok": "Löschen",
+            "cancel": "Abbrechen"
+          },
+          "tutorial": {
+            "title": "Tutorial neu starten?",
+            "body": "Die App startet neu und das Tutorial wird erneut angezeigt.",
+            "ok": "Neu starten",
+            "cancel": "Abbrechen"
+          }
+        }
+      },
+      "about": {
+        "licenses": "Lizenzen",
+        "donate": "Unterstütze das Projekt",
+        "report_issue": "Bug melden",
+        "rate": "Bewerten",
+        "modals": {
+          "licenses": {
+            "close": "Schließen"
+          }
+        }
+      }
+    }
+  },
+
+  "tutorial": {
+    "skip": "Tutorial überspringen",
+    "click_hint": "Klicke, um fortzufahren…",
+    "no_scroll_hint": "Kein Mausrad? Klicke, um fortzufahren…",
+    "modals": {
+      "skip": {
+        "title": "Tutorial überspringen?",
+        "body": "Du kannst es jederzeit in den Einstellungen erneut starten.",
+        "ok": "Überspringen",
+        "cancel": "Abbrechen"
+      }
+    },
+
+    "step1": "Hallo! Ich bin deine neue Uhr!\n\nIch erscheine nur über Vollbild-Apps, aber ich wollte kurz Hallo sagen!",
+    "step2": "Klicke mit der rechten Maustaste auf mich, um meine Position zu entsperren.",
+    "step3": "Wenn ich entsperrt bin, erscheinen Pfeile und du kannst mich frei verschieben.\n\nZieh mich an einen Bildschirmrand\nund ich raste dort ein!",
+    "step4": "Sehr gut!",
+    "step5": "Um meine Position fein anzupassen, kannst du über die Pfeile (oder über mich) fahren und das Mausrad benutzen.",
+    "step6": "Wenn ich entsperrt bin, kannst du die Einstellungen über das Zahnrad öffnen.",
+    "step7": "Wenn du mich nicht siehst, kannst du die Einstellungen per Doppelklick auf mein Symbol im Infobereich öffnen.",
+    "step8": "Im Einstellungsfenster kannst du mein Aussehen ändern und mich in bestimmten Apps ausblenden.\n\nSolange die Einstellungen offen sind, kannst du mich jederzeit verschieben.",
+    "step9": "Das war's! Bis zum nächsten Mal, wenn du spielst oder etwas schaust. Tschüss!"
+  },
+
+  "newer_config": {
+    "title": "Aktualisiere {app}",
+    "body": "Deine Einstellungen gehören zu einer neueren Version der App.",
+    "close": "Schließen"
+  }
+}

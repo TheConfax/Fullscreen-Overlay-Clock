@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "clock": {
+    "time_format": {
+      "use_24h": true,
+      "show_ampm": true,
+      "leading_zero": true,
+      "show_seconds": false
+    },
+    "text": {
+      "font_family": "Consolas",
+      "font_weight": "Bold",
+      "font_size": 13,
+      "color": "#FFFFFF",
+      "opacity": 1.0
+    },
+    "background": {
+      "color": "#000000",
+      "opacity": 0.75,
+      "padding": 50,
+      "corner_radius": 50,
+      "round_top_left": true,
+      "round_top_right": true,
+      "round_bottom_left": true,
+      "round_bottom_right": true,
+      "auto_corners": true
+    },
+    "shadow": {
+      "intensity": 0,
+      "color": "#000000",
+      "blur": 0,
+      "offset_x": 0,
+      "offset_y": 0
+    },
+    "position": {
+      "monitor": {
+        "id": "",
+        "name": ""
+      },
+      "x": 1.0,
+      "y": 0.0
+    }
+  },
+  "exclusions": [],
+  "system": {
+    "display": {
+      "show_on_desktop": false
+    },
+    "interface": {
+      "theme": "auto",
+      "language": "auto"
+    },
+    "tutorial": {
+      "completed": false,
+      "firstrun": true
+    }
+  }
+}
