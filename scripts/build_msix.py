@@ -18,7 +18,7 @@ import zipfile
 from pathlib import Path
 from xml.sax.saxutils import escape, quoteattr
 
-from _output import fail, fatal, handoff, info, ok, run_indented, step, steps, warn
+from _output import fail, fatal, fix, handoff, info, ok, run_indented, step, steps, warn
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -201,6 +201,17 @@ def _sign(msix: Path) -> int:
 def main() -> int:
     dev = _is_dev()
     steps(6 if dev else 5, "Packing the MSIX (dev)" if dev else "Packing the MSIX (release)")
+    if not dev:
+        # What the Store gets must match a commit of the public repo.
+        status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT,
+                                capture_output=True, text=True)
+        if status.returncode != 0:
+            fatal("git status failed", status.stderr.strip())
+        dirty = status.stdout.splitlines()
+        if dirty:
+            fail("the working tree is not clean", dirty)
+            fix("commit the changes, then pack again")
+            return 1
     bundled = BUILD / "_internal" / "pyproject.toml"
     if not (BUILD / f"{EXE_NAME}.exe").exists() or not bundled.exists():
         fatal(f"missing {BUILD.relative_to(ROOT)}", "build the exe first")
