@@ -53,6 +53,7 @@ SPI_GETNONCLIENTMETRICS = 0x0029
 SM_CXSMICON = 49
 NIM_MODIFY = 0x1
 NIF_ICON = 0x2
+NIF_SHOWTIP = 0x80
 
 # The desktop and the taskbars: excluded from fullscreen detection and from the app below.
 _SHELL_CLASSES = frozenset(
@@ -643,7 +644,8 @@ def set_tray_icon(ico_path, force: bool = False) -> None:
         nid.cbSize = ctypes.sizeof(nid)
         nid.hWnd = hwnd
         nid.uID = 0
-        nid.uFlags = NIF_ICON
+        # Every call must repeat NIF_SHOWTIP, or the version-4 tray drops the tooltip.
+        nid.uFlags = NIF_ICON | NIF_SHOWTIP
         nid.hIcon = handle
         applied = bool(_shell32.Shell_NotifyIconW(NIM_MODIFY, ctypes.byref(nid))) or applied
     if not applied:
