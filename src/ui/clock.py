@@ -6,8 +6,8 @@ import math
 from fractions import Fraction
 
 from PyQt6.QtCore import (
-    QByteArray, QDateTime, QEvent, QMargins, QPoint, QRect, QRectF, QSize, Qt, QTime, QTimer,
-    pyqtSignal,
+    QByteArray, QDateTime, QEvent, QMargins, QPoint, QPointF, QRect, QRectF, QSize, Qt, QTime,
+    QTimer, pyqtSignal,
 )
 from PyQt6.QtGui import (
     QColor, QCursor, QFont, QGuiApplication, QImage, QPainter, QPen, QPixmap, QRegion,
@@ -42,6 +42,8 @@ ARROW_PROTRUSION = GUTTER // 2 + 7
 ARROW_MIN_V = 20
 #: Gear icon (px), where the two arrows cross.
 GEAR_SIZE = 18
+#: Ink of the × that takes the gear's place while settings is open (px).
+CLOSE_SIZE = 13
 
 
 def _rgba(hex_color: str, opacity: float) -> str:
@@ -806,8 +808,24 @@ class ClockWindow(QWidget):
         x_active = self._active_axis == "x" or "x" in self._scroll_axes
         self._draw_arrow(painter, self._v_line, True, y_active, lit)
         self._draw_arrow(painter, self._h_line, False, x_active, lit)
-        pm = self._gear_pixmap(lit if self._gear_active else ARROW_IDLE)
-        painter.drawPixmap(self._gear_center - QPoint(GEAR_SIZE // 2, GEAR_SIZE // 2), pm)
+        on = self._gear_active
+        if self._settings_open:
+            self._draw_close(painter, lit if on else ARROW_IDLE, on)
+        else:
+            size = GEAR_SIZE + 2 if on else GEAR_SIZE  # grows like a lit arrow
+            pm = self._gear_pixmap(lit if on else ARROW_IDLE, size)
+            painter.drawPixmap(self._gear_center - QPoint(size // 2, size // 2), pm)
+
+    def _draw_close(self, painter: QPainter, color: QColor, active: bool) -> None:
+        """The × in the gear's place, stroked like the arrows."""
+        width = 3 if active else 2
+        pen = QPen(color, width)
+        pen.setCapStyle(Qt.PenCapStyle.RoundCap)
+        painter.setPen(pen)
+        c = QPointF(self._gear_center)
+        h = (CLOSE_SIZE + (2 if active else 0) - width) / 2  # the round caps add the rest
+        painter.drawLine(c + QPointF(-h, -h), c + QPointF(h, h))
+        painter.drawLine(c + QPointF(-h, h), c + QPointF(h, -h))
 
     @staticmethod
     def _draw_arrow(painter, line, vertical, active, active_color) -> None:
@@ -832,17 +850,17 @@ class ClockWindow(QWidget):
             painter.drawLine(x2, y, x2 - head, y - head)
             painter.drawLine(x2, y, x2 - head, y + head)
 
-    def _gear_pixmap(self, color: QColor) -> QPixmap:
-        """The gear SVG recolored like the arrows."""
+    def _gear_pixmap(self, color: QColor, size: int) -> QPixmap:
+        """The gear SVG recolored like the arrows, *size* px wide."""
         dpr = self.devicePixelRatioF()
-        key = (color.rgba(), dpr)
+        key = (color.rgba(), size, dpr)
         pm = self._gear_cache.get(key)
         if pm is not None:
             return pm
         svg = resource_path("resources", "settings.svg").read_text(encoding="latin-1")
         fill = f'fill="rgb({color.red()},{color.green()},{color.blue()})" fill-opacity="{color.alphaF():.3f}"'
         renderer = QSvgRenderer(QByteArray(svg.replace("<path ", f"<path {fill} ", 1).encode()))
-        pm = QPixmap(round(GEAR_SIZE * dpr), round(GEAR_SIZE * dpr))
+        pm = QPixmap(round(size * dpr), round(size * dpr))
         pm.fill(Qt.GlobalColor.transparent)
         p = QPainter(pm)
         p.setRenderHint(QPainter.RenderHint.Antialiasing, True)
@@ -896,6 +914,7 @@ class ClockWindow(QWidget):
         window is frozen: style edits are the only thing that resizes the clock."""
         self._settings_open = open_
         self.freeze_geometry(open_)
+        self.update()  # gear or ×
 
     def event(self, e) -> bool:
         # Click-away leaves edit mode, unless settings takes over or the tutorial holds it.
