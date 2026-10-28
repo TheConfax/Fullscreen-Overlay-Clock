@@ -3,9 +3,12 @@ A lightweight, customizable clock that floats over fullscreen games and apps.
 
 <div align="center">
 
-<a href="https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct"><picture><source media="(prefers-color-scheme: dark)" srcset="https://get.microsoft.com/images/en-us%20light.svg"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" height="58"></picture></a>
+<a href="https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct"><picture><source media="(prefers-color-scheme: dark)" srcset="https://get.microsoft.com/images/en-us%20light.svg"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" height="58"></picture></a>  
+[![Microsoft Store Version](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fdisplaycatalog.mp.microsoft.com%2Fv7.0%2Fproducts%3FbigIds%3D9PJCDSKT048V%26market%3DUS%26languages%3Den-us&search=FullscreenOverlayClock_%28%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%29%5C.%5Cd%2B_&replace=v%241&label=version&color=0078D4&cacheSeconds=3600)](https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct)
+[![Microsoft Store Rating](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fdisplaycatalog.mp.microsoft.com%2Fv7.0%2Fproducts%3FbigIds%3D9PJCDSKT048V%26market%3DUS%26languages%3Den-us&search=%22AllTime%22%2C%22AverageRating%22%3A%28%5Cd%2B%29%28%3F%3A%5C.0%5Cb%7C%28%5C.%5Cd%2B%29%29&replace=%241%242%2F5&label=rating&color=0078D4&cacheSeconds=3600)](https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct)
 
-<a href="https://ko-fi.com/theconfax"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/ko-fi-light.png"><img src="assets/ko-fi-dark.png" alt="Support me on Ko-fi" height="34"></picture></a>
+<a href="https://ko-fi.com/theconfax"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/ko-fi-light.png"><img src="assets/ko-fi-dark.png" alt="Support me on Ko-fi" height="34"></picture></a>  
+[![Also check out: Disable Passkeys](assets/badge-dp.svg)](https://github.com/TheConfax/Disable-Passkeys)
 
 </div>
 
@@ -32,9 +35,12 @@ It shows the system time in a small overlay **only while a fullscreen app is in 
 **Install from the Microsoft Store**
 <div align="center">
 
-<a href="https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct"><picture><source media="(prefers-color-scheme: dark)" srcset="https://get.microsoft.com/images/en-us%20light.svg"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" height="58"></picture></a>
+<a href="https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct"><picture><source media="(prefers-color-scheme: dark)" srcset="https://get.microsoft.com/images/en-us%20light.svg"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" height="58"></picture></a>  
+[![Microsoft Store Version](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fdisplaycatalog.mp.microsoft.com%2Fv7.0%2Fproducts%3FbigIds%3D9PJCDSKT048V%26market%3DUS%26languages%3Den-us&search=FullscreenOverlayClock_%28%5Cd%2B%5C.%5Cd%2B%5C.%5Cd%2B%29%5C.%5Cd%2B_&replace=v%241&label=version&color=0078D4&cacheSeconds=3600)](https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct)
+[![Microsoft Store Rating](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fdisplaycatalog.mp.microsoft.com%2Fv7.0%2Fproducts%3FbigIds%3D9PJCDSKT048V%26market%3DUS%26languages%3Den-us&search=%22AllTime%22%2C%22AverageRating%22%3A%28%5Cd%2B%29%28%3F%3A%5C.0%5Cb%7C%28%5C.%5Cd%2B%29%29&replace=%241%242%2F5&label=rating&color=0078D4&cacheSeconds=3600)](https://apps.microsoft.com/detail/9PJCDSKT048V?mode=direct)
 
-<a href="https://ko-fi.com/theconfax"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/ko-fi-light.png"><img src="assets/ko-fi-dark.png" alt="Support me on Ko-fi" height="34"></picture></a>
+<a href="https://ko-fi.com/theconfax"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/ko-fi-light.png"><img src="assets/ko-fi-dark.png" alt="Support me on Ko-fi" height="34"></picture></a>  
+[![Also check out: Disable Passkeys](assets/badge-dp.svg)](https://github.com/TheConfax/Disable-Passkeys)
 
 </div>
 
