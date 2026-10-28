@@ -41,6 +41,7 @@ MAKEAPPX = TOOLS / "makeappx.exe"
 MAKEPRI = TOOLS / "makepri.exe"
 SIGNTOOL = TOOLS / "signtool.exe"
 CERT_STORE = "Cert:\\CurrentUser\\My"
+DISPLAY_NAME = APP_NAME
 
 
 def _is_dev() -> bool:
@@ -52,6 +53,7 @@ def _is_dev() -> bool:
 
 if _is_dev():
     PUBLISHER = f"CN={APP_NAME} - Dev"
+    DISPLAY_NAME = f"{APP_NAME} - Dev"
 
 
 def _latest_sdk() -> str | None:
@@ -138,8 +140,8 @@ def _stamp_manifest(manifest: Path, version: str) -> None:
     text = _sub(text, r'Description="[^"]*"',
                 f"Description={quoteattr(DESCRIPTION)}", "Description attribute")
     text = _sub(text, r"<DisplayName>.*?</DisplayName>",
-                f"<DisplayName>{escape(APP_NAME)}</DisplayName>", "<DisplayName>")
-    text = _sub(text, r'DisplayName="[^"]*"', f"DisplayName={quoteattr(APP_NAME)}",
+                f"<DisplayName>{escape(DISPLAY_NAME)}</DisplayName>", "<DisplayName>")
+    text = _sub(text, r'DisplayName="[^"]*"', f"DisplayName={quoteattr(DISPLAY_NAME)}",
                 "DisplayName attribute", count=2)
     text = _sub(text, r'Executable="[^"]*"', f'Executable="{EXE_NAME}.exe"',
                 "Executable attribute", count=2)
