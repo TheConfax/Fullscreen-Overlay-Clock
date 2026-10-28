@@ -173,9 +173,9 @@ class ClockWindow(QWidget):
     drag_ended = pyqtSignal()
     #: While dragging: per-border (intensity, along) for the guide, see :meth:`_edge_glow`.
     edge_glow = pyqtSignal(object)
-    #: The gear was clicked, or the clock right-clicked while settings is open.
+    #: The gear was clicked.
     settings_requested = pyqtSignal()
-    #: The gear, an × while settings is open, was clicked.
+    #: The gear, an × while settings is open, was clicked, or the clock right-clicked then.
     settings_close_requested = pyqtSignal()
     #: Clicks on the clock while the tutorial owns it, instead of their normal action.
     tutorial_left_click = pyqtSignal()
@@ -944,12 +944,12 @@ class ClockWindow(QWidget):
             event.accept()
             return
         if event.button() == Qt.MouseButton.RightButton and not self._dragging:
-            # Toggles edit mode; with settings open it brings them forward.
+            # Toggles edit mode; leaving it with settings open closes them.
             if self._tutorial_hold:
                 event.accept()  # move phase: edit mode stays on
                 return
             if self._settings_open:
-                self.settings_requested.emit()
+                self.settings_close_requested.emit()
             else:
                 self.set_draggable(not self._draggable)
                 if self._draggable:

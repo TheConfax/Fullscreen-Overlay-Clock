@@ -71,7 +71,6 @@ class AppController(QObject):
         self._tutorial = TutorialController(self._clock, self)
         self._slide_anim: QVariantAnimation | None = None
         self._finish_anim: QVariantAnimation | None = None
-        self._closing_from_cog = False  # closed by the clock's ×: stay in edit mode
         self._dissolve_anim: QVariantAnimation | None = None
         self._onboarding = False  # tutorial or its goodbye running: nothing may be saved
         self._first_run = False  # the genuine first onboarding, not a restart
@@ -183,13 +182,14 @@ class AppController(QObject):
     def _wire(self) -> None:
         self._settings.config_changed.connect(self._on_settings_changed)
         self._settings.closed.connect(self._on_settings_closed)
+        self._settings.minimized_changed.connect(self._on_settings_minimized)
         self._settings.restart_requested.connect(self._restart_app)
         self._clock.position_changed.connect(self._on_clock_dragged)
         self._clock.drag_started.connect(self._on_drag_started)
         self._clock.drag_ended.connect(self._on_drag_ended)
         self._clock.edge_glow.connect(self._guide.set_glow)
         self._clock.settings_requested.connect(lambda: self._open_settings("cog"))
-        self._clock.settings_close_requested.connect(self._close_settings_from_cog)
+        self._clock.settings_close_requested.connect(self._settings.close)
         self._tray.settings_requested.connect(lambda: self._open_settings("tray"))
         self._tray.quit_requested.connect(self._quit)
         self._tray.menu_about_to_show.connect(lambda: self._clock.pause_topmost(True))
@@ -266,7 +266,7 @@ class AppController(QObject):
             self._settings.retranslate()
         self._clock.notify_settings_open(True)
         self._settings.load(self._config)
-        self._settings.show()
+        self._settings.showNormal()  # closed while minimized, show() would reopen it minimized
         # Centered on the clock's monitor, clear of the edge-anchored clock.
         frame = self._settings.frameGeometry()
         frame.moveCenter(self._clock.target_screen().availableGeometry().center())
@@ -287,21 +287,25 @@ class AppController(QObject):
         if self._tutorial.active:
             self._tutorial.on_drag_ended()
 
-    def _close_settings_from_cog(self) -> None:
-        """The clock's ×: close settings but stay in edit mode."""
-        self._closing_from_cog = True
-        self._settings.close()
-
     def _on_settings_closed(self) -> None:
         self._clock.notify_settings_open(False)
-        # Closing the window leaves edit mode, the clock's × doesn't. In the tutorial, edit
-        # mode belongs to the tutorial.
-        if not self._closing_from_cog and not self._tutorial.active:
+        # In the tutorial, edit mode belongs to the tutorial.
+        if not self._tutorial.active:
             self._clock.set_draggable(False)
-        self._closing_from_cog = False
         self._guide.hide()
         if self._tutorial.active:
             self._tutorial.on_settings_closed()  # reveal "click to continue" now if it was armed
+
+    def _on_settings_minimized(self, minimized: bool) -> None:
+        """Minimized settings lock the clock like closed ones; restored, they unlock it."""
+        if self._tutorial.active:
+            return
+        self._clock.notify_settings_open(not minimized)
+        self._clock.set_draggable(not minimized)
+        if minimized:
+            self._guide.hide()
+        else:
+            self._clock.bring_to_front()
 
     # -- tutorial: actions the tutorial delegates back to the controller ------
     def park_clock(self, on_done=None, nudged: bool = False) -> None:

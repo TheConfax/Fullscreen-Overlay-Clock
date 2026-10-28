@@ -1149,6 +1149,7 @@ class SettingsWindow(QWidget):
 
     config_changed = pyqtSignal(object)  # Config
     closed = pyqtSignal()
+    minimized_changed = pyqtSignal(bool)  # True: minimized, False: restored
     restart_requested = pyqtSignal()  # Restart tutorial
 
     def __init__(self, screens_provider) -> None:
@@ -2243,6 +2244,10 @@ class SettingsWindow(QWidget):
                 self.close()  # the preview reached by keyboard closes like on hover
                 return True
             self._refresh_startup()
+        if event.type() == QEvent.Type.WindowStateChange:
+            was = bool(event.oldState() & Qt.WindowState.WindowMinimized)
+            if was != self.isMinimized():
+                self.minimized_changed.emit(self.isMinimized())
         # The icons are drawn at one density; Qt would stretch them blurry.
         if event.type() == QEvent.Type.DevicePixelRatioChange:
             self.request_rebuild()
